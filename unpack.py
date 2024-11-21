@@ -25,3 +25,25 @@ print(z)
 # 12
 # 10
 # 13
+
+
+# Dictionary unpacking
+person = {
+    'name' : 'John Doe',
+    'age' : 30,
+    'city' : 'New York',
+}
+
+for key , value in person.items():
+    print(key , value)
+
+for key in person.keys() :
+    print(key)
+
+for value in person.values() :
+    print(value)
+
+# Output:
+# name John Doe
+# age 30
+# city New York
