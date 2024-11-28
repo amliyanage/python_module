@@ -48,6 +48,49 @@ def calculate_cost(price , qty , discount = 0 , tex = 0) :
     return total
 
 print(calculate_cost(100, 2, 10, 5))
-    
+
+## arbitrary positional arguments
+def add_number(*args) :
+    total = 0
+    for a in args :
+        print(a)
+        total += a
+    return total
+
+print(add_number(1,2,3,4,5,6,7,8,9,10))
+
+def add_string(*args) :
+    total = ""
+    for a in args :
+        total += " " + a
+    return total
+
+print(add_string("Hello", "World", "Python"))
+
+# if use dont know how many arguments will be passed to the function then use arbitrary positional arguments
+
+## Q1
+# write a python function called summarized_grade that accept student's name as a mandatory argument and
+# an arbitrary number of grades scores the function should , 
+
+# 1. print the student's name
+# 2 . calculate and print the highest grade , lowest grade and average grade form provided scores
+# 3. if no grade are provided you should print "No grades available"
+
+grades = [10, 20, 30, 40, 50 , 70 , 90]
+
+def summarized_grade(name, *scores) :
+    print(name)
+    if len(scores) == 0 :
+        print("No grades available")
+    else :
+        print("Highest grade : ", max(scores))
+        print("Lowest grade : ", min(scores))
+        print("Average grade : ", sum(scores)/len(scores))
+
+summarized_grade("John", 10, 20, 30, 40, 50 , 70 , 90)
+summarized_grade("Smith")
+
+
 
 
