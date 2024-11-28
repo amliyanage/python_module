@@ -16,3 +16,14 @@ print("Type : ",type(result)) # output Type :  <class 'map'>
 # convert map to list
 print(list(result)) # output = [1, 16, 9, 25, 9, 25]
 # use can pass any iterable number to map but only one function can pass to map function
+
+
+# filter() function
+def is_even(x) :
+    return x % 2 == 0
+
+my_list = [1,4,3,5,3,5,8]
+result = filter(is_even,my_list)
+print(result) # output = <filter object at 0x00000230A59B83A0>
+print("Type : ",type(result)) # output Type :  <class 'filter'>
+print(list(result)) # output = [4]
